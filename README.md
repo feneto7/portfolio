@@ -24,7 +24,7 @@ npm run preview
 ## Estrutura e componentes
 
 ```text
-public/                     favicon e capa SVG do NETINOVE
+public/                     favicon, currículo e captura real do NETINOVE ERP
 src/
   app/App.tsx               composição e imports dinâmicos das seções
   components/

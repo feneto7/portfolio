@@ -20,8 +20,9 @@ export const projects: Project[] = [
     description:
       'ERP de vendas e emissão de notas fiscais integrado à SEFAZ, com uma aplicação web desenvolvida em React e Vite e um PDV desktop construído com Electron. Duas frentes do mesmo projeto para apoiar a gestão e a operação de vendas.',
     tags: ['React', 'Vite', 'TypeScript', 'Electron'],
-    image: '/netinove-cover.svg',
-    imageAlt: 'Capa conceitual NETINOVE, ERP de vendas e notas fiscais.',
+    image: '/netinove-erp.png',
+    imageAlt:
+      'Tela do NETINOVE ERP em tema escuro, com barra superior de módulos e logotipo central.',
     href: null,
     featured: true,
   },

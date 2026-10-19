@@ -5,23 +5,23 @@ import type { Project } from '@/types';
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group overflow-hidden border border-line bg-bg-card">
-      <div className="relative overflow-hidden">
+    <article className="overflow-hidden border border-line bg-bg-card">
+      <div className="overflow-hidden bg-bg-base">
         <img
           src={project.image}
           alt={project.imageAlt}
           width={1000}
           height={560}
           loading="lazy"
-          className="aspect-[16/9] w-full object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.025]"
+          className="aspect-[16/9] w-full object-contain"
         />
+      </div>
+      <div className="p-7">
         {project.featured && (
-          <span className="absolute left-5 top-5 bg-ink px-3 py-2 text-[9px] font-bold tracking-[.14em] text-accent">
+          <span className="mb-4 inline-block bg-ink px-3 py-2 text-[9px] font-bold tracking-[.14em] text-accent">
             {portfolioCopy.featured}
           </span>
         )}
-      </div>
-      <div className="p-7">
         <p className="mb-3 text-[9px] tracking-[.18em] text-accent">
           {project.category}
         </p>
