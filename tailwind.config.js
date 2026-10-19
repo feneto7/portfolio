@@ -1,0 +1,31 @@
+export default {
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        'bg-base': '#2E3446',
+        'bg-sidebar': '#3A4256',
+        'bg-card': '#3A4256',
+        line: '#4A5268',
+        'card-edge': '#56607A',
+        accent: '#6C9EFF',
+        'accent-hover': '#8BB2FF',
+        'accent-active': '#3867B8',
+        'text-primary': '#E6E9F0',
+        'text-muted': '#A9B0C0',
+        white: '#FFFFFF',
+        ink: '#202738',
+        'art-dark': '#242A3A',
+        'art-mid': '#47536E',
+        'art-light': '#BACEEF',
+        'status-success': '#A5DDC1',
+        'status-error': '#FFBAC4',
+      },
+      fontFamily: { sans: ['Nunito', 'sans-serif'] },
+      width: { sidebar: '220px' },
+      spacing: { sidebar: '220px' },
+      borderRadius: { DEFAULT: '2px' },
+    },
+  },
+  plugins: [],
+};
