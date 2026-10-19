@@ -7,11 +7,16 @@ export const siteConfig = {
   locale: 'pt-BR',
   timeZone: 'America/Sao_Paulo',
   role: 'Front-End / Mobile Developer',
-  email: null as string | null,
+  email: 'franciscofelipesn@gmail.com' as string | null,
+  phone: { label: '(75) 99884-2196', href: 'tel:+5575998842196' },
   contact: {
     endpoint: import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined,
   },
-  cv: { href: '/cv-felipe-neto.pdf', available: false },
+  cv: {
+    href: '/cv-felipe-neto.pdf',
+    available: true,
+    downloadName: 'FranciscoFelipe_SantiagoNeto_Currículo.pdf',
+  },
 };
 export const layoutCopy = {
   navigation: 'Navegação principal',

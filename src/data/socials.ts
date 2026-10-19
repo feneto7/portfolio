@@ -3,7 +3,7 @@ import type { Social } from '@/types';
 import { siteConfig } from './siteConfig';
 
 export const socials: Social[] = [
-  { label: 'GitHub', href: null, icon: FiGithub },
+  { label: 'GitHub', href: 'https://github.com/feneto7', icon: FiGithub },
   { label: 'LinkedIn', href: null, icon: FiLinkedin },
   { label: 'Instagram', href: null, icon: FiInstagram },
   {

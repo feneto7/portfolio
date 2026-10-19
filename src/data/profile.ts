@@ -19,7 +19,7 @@ export const heroCopy = {
 export const profile = {
   introduction: 'Eu sou',
   name: siteConfig.name,
-  bio: 'Transformo ideias em interfaces intuitivas e aplicações bem estruturadas. Há 3 anos, desenvolvo para a web e o mobile com atenção à experiência de quem usa e à qualidade de cada linha de código.',
+  bio: 'Sou Francisco Felipe Santiago Neto, desenvolvedor de São Felipe, Bahia. Transformo ideias em interfaces intuitivas e aplicações bem estruturadas. Minha trajetória também inclui suporte técnico na Netinove desde 2019, com atendimento ao usuário, documentação e treinamento de equipes — experiências que reforçam meu cuidado com quem utiliza cada produto.',
   photo: '/profile.jpg',
   photoAvailable: false,
   photoAlt: 'Foto de Felipe Neto',
@@ -37,11 +37,12 @@ export const profile = {
     'Acessibilidade',
   ],
   details: [
-    { label: 'Nome completo', value: 'Felipe Neto' },
+    { label: 'Nome completo', value: 'Francisco Felipe Santiago Neto' },
     { label: 'Experiência', value: '3 anos' },
     { label: 'Idiomas', value: 'A informar' },
-    { label: 'Localização', value: 'A informar' },
+    { label: 'Localização', value: 'São Felipe, Bahia — Brasil' },
     { label: 'E-mail', value: siteConfig.email ?? 'A informar' },
+    { label: 'Telefone', value: siteConfig.phone.label },
     { label: 'Freelance', value: 'Disponível' },
   ] satisfies ProfileDetail[],
 };

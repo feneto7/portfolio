@@ -5,6 +5,7 @@ export const contactCopy = {
   description:
     'Tem uma ideia, um projeto ou um desafio? Conte um pouco sobre o que você tem em mente.',
   emailLabel: 'E-mail',
+  phoneLabel: 'Telefone',
   emailPending: 'E-mail a informar',
   availabilityLabel: 'Freelance',
   availability: 'Disponível para novos projetos',

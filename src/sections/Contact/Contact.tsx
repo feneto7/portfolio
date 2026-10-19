@@ -1,4 +1,4 @@
-import { Mail, BriefcaseBusiness } from 'lucide-react';
+import { Mail, Phone, BriefcaseBusiness } from 'lucide-react';
 import { contactCopy } from '@/data/contact';
 import { sectionCopy, siteConfig } from '@/data/siteConfig';
 import { SectionTitle } from '@/components/ui/SectionTitle';
@@ -41,6 +41,25 @@ export function Contact() {
                     {contactCopy.emailPending}
                   </p>
                 )}
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <Phone
+                size={23}
+                strokeWidth={1.5}
+                className="mt-1 shrink-0 text-accent"
+                aria-hidden="true"
+              />
+              <div>
+                <h3 className="mb-1 text-xs font-semibold">
+                  {contactCopy.phoneLabel}
+                </h3>
+                <a
+                  href={siteConfig.phone.href}
+                  className="text-sm text-text-muted hover:text-accent"
+                >
+                  {siteConfig.phone.label}
+                </a>
               </div>
             </div>
             <div className="flex gap-4">

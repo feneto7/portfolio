@@ -1,7 +1,13 @@
-import { skillGroups, services, skillsCopy } from '@/data/skills';
+import {
+  skillGroups,
+  services,
+  skillsCopy,
+  professionalSkills,
+} from '@/data/skills';
 import { sectionCopy } from '@/data/siteConfig';
 import { SectionTitle } from '@/components/ui/SectionTitle';
 import { Card } from '@/components/ui/Card';
+import { Tag } from '@/components/ui/Tag';
 
 export function Skills() {
   return (
@@ -58,6 +64,16 @@ export function Skills() {
                 </p>
               </Card>
             ))}
+          </div>
+          <div className="mt-8 border-t border-line pt-7">
+            <h2 className="mb-4 text-xl">{skillsCopy.professionalTitle}</h2>
+            <ul className="flex flex-wrap gap-2">
+              {professionalSkills.map((skill) => (
+                <li key={skill}>
+                  <Tag>{skill}</Tag>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

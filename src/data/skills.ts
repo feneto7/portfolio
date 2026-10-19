@@ -5,8 +5,17 @@ import {
   SiNextdotjs,
   SiVite,
   SiTailwindcss,
+  SiHtml5,
+  SiCss,
 } from 'react-icons/si';
-import { Smartphone, BrainCircuit, CodeXml, Blocks } from 'lucide-react';
+import {
+  Smartphone,
+  BrainCircuit,
+  CodeXml,
+  Blocks,
+  Monitor,
+  BookOpen,
+} from 'lucide-react';
 import type { SkillGroup, Service } from '@/types';
 
 export const skillsCopy = {
@@ -14,6 +23,7 @@ export const skillsCopy = {
   description:
     'Uma base técnica sólida, aliada ao cuidado com os detalhes e à vontade de continuar aprendendo.',
   servicesTitle: 'O que eu posso construir',
+  professionalTitle: 'Como eu trabalho em equipe',
 };
 export const skillGroups: SkillGroup[] = [
   {
@@ -30,6 +40,15 @@ export const skillGroups: SkillGroup[] = [
       { name: 'Next.js', icon: SiNextdotjs },
       { name: 'Vite', icon: SiVite },
       { name: 'Tailwind CSS', icon: SiTailwindcss },
+      { name: 'HTML5', icon: SiHtml5 },
+      { name: 'CSS3', icon: SiCss },
+    ],
+  },
+  {
+    title: 'Suporte técnico',
+    items: [
+      { name: 'Suporte a usuários e equipamentos', icon: Monitor },
+      { name: 'Documentação e treinamento', icon: BookOpen },
     ],
   },
   {
@@ -40,6 +59,14 @@ export const skillGroups: SkillGroup[] = [
     title: 'Inteligência artificial',
     items: [{ name: 'Base de conhecimento sólida', icon: BrainCircuit }],
   },
+];
+export const professionalSkills: string[] = [
+  'Trabalho em equipe',
+  'Comunicação clara',
+  'Gestão do tempo',
+  'Resolução de problemas',
+  'Aprendizado ágil',
+  'Compromisso com a qualidade',
 ];
 export const services: Service[] = [
   {

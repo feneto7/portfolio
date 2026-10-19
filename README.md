@@ -33,7 +33,7 @@ src/
     layout/                 Sidebar, NavItem, MobileNav, SectionWrapper
   sections/
     Hero/                   Hero, HeroIllustration (SVG original)
-    About/                  About
+    About/                  About, ProfilePortrait, ResumeHighlights
     Skills/                 Skills
     Portfolio/              Portfolio, ProjectCard
     Contact/                Contact, ContactForm, ContactField
@@ -64,13 +64,16 @@ Exports de componentes são nomeados; `React.lazy` adapta esses exports na front
 
 Adicione projetos ao array `projects`; o grid se adapta automaticamente. Use `href: null` enquanto uma URL real não estiver disponível. Não há projetos, métricas, contatos ou fotos pessoais inventados.
 
-### Pendências pessoais antes de divulgar
+### Dados preenchidos e pendências pessoais
 
-1. Configure `siteConfig.email` e os links em `socials.ts`.
-2. Preencha idiomas e localização em `profile.ts`.
-3. Adicione sua foto a `public/profile.jpg` e altere `profile.photoAvailable` para `true`. Até lá, a moldura mostra um placeholder com iniciais, sem imagem quebrada.
-4. Adicione o PDF real em `public/cv-felipe-neto.pdf` e altere `siteConfig.cv.available` para `true`. O botão já aponta para o caminho, mas permanece desabilitado enquanto o arquivo não foi fornecido.
-5. Configure a URL real do NETINOVE em `projects.ts`. A capa é uma composição conceitual original, identificada como tal; não representa uma captura do sistema.
+O currículo fornecido foi copiado sem alterações para `public/cv-felipe-neto.pdf`. O botão está ativo e usa o nome original do documento no download. Nome completo, e-mail, telefone, cidade, GitHub, histórico profissional e formação foram preenchidos a partir do PDF. O nome de apresentação continua Felipe Neto.
+
+- `src/data/resume.ts`: cargos, datas e formação; o curso no IFBA está identificado como trancado.
+- `src/data/skills.ts`: inclui HTML, CSS, suporte técnico, documentação e competências profissionais do currículo, mantendo a stack informada no briefing.
+- Os 3 anos de experiência do briefing foram preservados. As experiências profissionais usam as datas registradas no currículo, sem recalcular seus rótulos de duração.
+- O formulário já abre uma mensagem para o e-mail configurado via `mailto:`; o visitante precisa concluir o envio no aplicativo de e-mail.
+
+Ainda falta informar idiomas, URLs de LinkedIn e Instagram, a URL do projeto NETINOVE e uma foto. Adicione a foto em `public/profile.jpg` e altere `profile.photoAvailable` para `true`. O currículo permanece com seu conteúdo original; o site mostra apenas cidade/estado como localização.
 
 ## Formulário
 
