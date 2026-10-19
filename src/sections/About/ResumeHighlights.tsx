@@ -1,9 +1,9 @@
-import { BriefcaseBusiness, GraduationCap } from 'lucide-react';
-import { career, education, resumeCopy } from '@/data/resume';
+import { BriefcaseBusiness } from 'lucide-react';
+import { career, resumeCopy } from '@/data/resume';
 
 export function ResumeHighlights() {
   return (
-    <div className="mt-12 grid items-start gap-10 border-t border-line pt-8 xl:grid-cols-[1.4fr_1fr]">
+    <div className="mt-12 border-t border-line pt-8">
       <section aria-labelledby="experience-title">
         <h2
           id="experience-title"
@@ -39,30 +39,6 @@ export function ResumeHighlights() {
             </li>
           ))}
         </ol>
-      </section>
-      <section aria-labelledby="education-title">
-        <h2
-          id="education-title"
-          className="mb-7 flex items-center gap-3 text-xl"
-        >
-          <GraduationCap size={23} className="text-accent" aria-hidden="true" />
-          {resumeCopy.educationTitle}
-        </h2>
-        {education.map((entry) => (
-          <article
-            key={`${entry.institution}-${entry.course}`}
-            className="border-t-[3px] border-card-edge bg-bg-card p-6"
-          >
-            <p className="mb-3 text-xs text-accent">{entry.date}</p>
-            <h3 className="text-lg font-semibold">{entry.course}</h3>
-            <p className="mt-2 text-sm text-text-muted">
-              {entry.institution} · {entry.location}
-            </p>
-            <p className="mt-5 border-t border-line pt-4 text-sm text-text-primary">
-              {entry.status}
-            </p>
-          </article>
-        ))}
       </section>
     </div>
   );

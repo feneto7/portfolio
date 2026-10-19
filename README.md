@@ -62,14 +62,14 @@ Exports de componentes são nomeados; `React.lazy` adapta esses exports na front
 | `src/data/contact.ts`    | Campos, limites, validação e mensagens de envio                 |
 | `tailwind.config.js`     | Tokens de cores, fonte e dimensões                              |
 
-Adicione projetos ao array `projects`; o grid se adapta automaticamente. Use `href: null` enquanto uma URL real não estiver disponível. Não há projetos, métricas, contatos ou fotos pessoais inventados.
+O NETINOVE ERP apresenta sua aplicação web em React/Vite e o PDV desktop em Electron. Adicione projetos ao array `projects`; o grid se adapta automaticamente. Use `href: null` enquanto uma URL real não estiver disponível. Não há projetos, métricas, contatos ou fotos pessoais inventados.
 
 ### Dados preenchidos e pendências pessoais
 
-O currículo fornecido foi copiado sem alterações para `public/cv-felipe-neto.pdf`. O botão está ativo e usa o nome original do documento no download. Nome completo, e-mail, telefone, cidade, GitHub, histórico profissional e formação foram preenchidos a partir do PDF. O nome de apresentação continua Felipe Neto.
+O currículo fornecido foi copiado sem alterações para `public/cv-felipe-neto.pdf`. O botão está ativo e usa o nome original do documento no download. Nome completo, e-mail, telefone, cidade, GitHub e histórico profissional foram preenchidos a partir do PDF. O nome de apresentação continua Felipe Neto.
 
-- `src/data/resume.ts`: cargos, datas e formação; o curso no IFBA está identificado como trancado.
-- `src/data/skills.ts`: inclui HTML, CSS, suporte técnico, documentação e competências profissionais do currículo, mantendo a stack informada no briefing.
+- `src/data/resume.ts`: cargos e datas do histórico profissional. A formação acadêmica foi removida da aba Sobre a pedido do titular.
+- `src/data/skills.ts`: inclui HTML, CSS, suporte técnico, documentação e competências profissionais do currículo, mantendo a stack informada no briefing e acrescentando Electron para aplicações desktop.
 - Os 3 anos de experiência do briefing foram preservados. As experiências profissionais usam as datas registradas no currículo, sem recalcular seus rótulos de duração.
 - O formulário já abre uma mensagem para o e-mail configurado via `mailto:`; o visitante precisa concluir o envio no aplicativo de e-mail.
 

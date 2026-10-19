@@ -7,6 +7,7 @@ import {
   SiTailwindcss,
   SiHtml5,
   SiCss,
+  SiElectron,
 } from 'react-icons/si';
 import {
   Smartphone,
@@ -43,6 +44,10 @@ export const skillGroups: SkillGroup[] = [
       { name: 'HTML5', icon: SiHtml5 },
       { name: 'CSS3', icon: SiCss },
     ],
+  },
+  {
+    title: 'Desktop',
+    items: [{ name: 'Electron', icon: SiElectron }],
   },
   {
     title: 'Suporte técnico',
