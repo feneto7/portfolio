@@ -1,10 +1,11 @@
+import { localize, locale } from '../i18n/locale';
 import { seo } from './seo';
 
-export const siteConfig = {
+export const siteConfig = localize({
   ...seo,
   logo: 'Felipe.dev',
   name: 'Felipe Neto',
-  locale: 'pt-BR',
+  locale,
   timeZone: 'America/Sao_Paulo',
   role: 'Desenvolvedor Web & Desktop',
   email: 'franciscofelipesn@gmail.com' as string | null,
@@ -21,8 +22,8 @@ export const siteConfig = {
     available: true,
     downloadName: 'FranciscoFelipe_SantiagoNeto_Currículo.pdf',
   },
-};
-export const layoutCopy = {
+});
+export const layoutCopy = localize({
   navigation: 'Navegação principal',
   openMenu: 'Abrir menu',
   closeMenu: 'Fechar menu',
@@ -34,11 +35,11 @@ export const layoutCopy = {
   socialPending: 'Link em breve',
   error: 'Não foi possível carregar esta seção.',
   retry: 'Tentar novamente',
-};
-export const sectionCopy = {
+});
+export const sectionCopy = localize({
   home: { eyebrow: 'DESENVOLVIMENTO FRONT-END', title: 'Início' },
   about: { eyebrow: 'UM POUCO DA MINHA HISTÓRIA', title: 'Sobre mim' },
   skills: { eyebrow: 'FERRAMENTAS & POSSIBILIDADES', title: 'Habilidades' },
   portfolio: { eyebrow: 'DO PRIMEIRO COMMIT AO PRODUTO', title: 'Portfólio' },
   contact: { eyebrow: 'VAMOS CONSTRUIR ALGO JUNTOS', title: 'Contato' },
-};
+});

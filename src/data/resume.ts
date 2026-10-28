@@ -1,3 +1,4 @@
+import { localize } from '../i18n/locale';
 interface CareerEntry {
   role: string;
   organization: string;
@@ -6,11 +7,11 @@ interface CareerEntry {
   highlights: string[];
 }
 
-export const resumeCopy = {
+export const resumeCopy = localize({
   experienceTitle: 'Experiência profissional',
-};
+});
 
-export const career: CareerEntry[] = [
+export const career: CareerEntry[] = localize([
   {
     role: 'Desenvolvedor Front-End',
     organization: 'Autônomo',
@@ -32,4 +33,4 @@ export const career: CareerEntry[] = [
       'Orientação sobre segurança da informação, melhoria de processos e colaboração com a equipe para resolver problemas recorrentes.',
     ],
   },
-];
+]);

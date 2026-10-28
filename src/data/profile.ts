@@ -1,7 +1,8 @@
+import { localize } from '../i18n/locale';
 import type { ProfileDetail } from '@/types';
 import { siteConfig } from './siteConfig';
 
-export const heroCopy = {
+export const heroCopy = localize({
   greeting: 'Olá, eu sou',
   name: siteConfig.name,
   headline:
@@ -16,8 +17,8 @@ export const heroCopy = {
   artCaption: 'Interfaces para o dia a dia de quem usa.',
   stackLabel: 'MINHA STACK',
   stack: ['React', 'TypeScript', 'Electron'],
-};
-export const profile = {
+});
+export const profile = localize({
   introduction: 'Eu sou',
   name: siteConfig.name,
   bio: 'Sou Francisco Felipe Santiago Neto, desenvolvedor de São Felipe, Bahia. Transformo ideias em interfaces intuitivas e aplicações bem estruturadas. Minha trajetória também inclui suporte técnico na Netinove desde 2019, com atendimento ao usuário, documentação e treinamento de equipes — experiências que reforçam meu cuidado com quem utiliza cada produto.',
@@ -46,4 +47,4 @@ export const profile = {
     { label: 'Telefone', value: siteConfig.phone.label },
     { label: 'Freelance', value: 'Disponível' },
   ] satisfies ProfileDetail[],
-};
+});

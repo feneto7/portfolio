@@ -5,6 +5,7 @@ import { layoutCopy, siteConfig } from '@/data/siteConfig';
 import { DESKTOP_QUERY, useMediaQuery } from '@/hooks/useMediaQuery';
 import type { SectionId } from '@/types';
 import { NavItem } from './NavItem';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function MobileNav({ active }: { active: SectionId }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -70,6 +71,9 @@ export function MobileNav({ active }: { active: SectionId }) {
             />
           ))}
         </nav>
+        <div className="px-6 py-6">
+          <LanguageSwitcher />
+        </div>
       </dialog>
     </>
   );

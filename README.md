@@ -110,7 +110,17 @@ Execute `npm run build` e publique o conteúdo de `dist/`. A navegação usa `#h
 - Menu móvel abaixo de 1024px com `dialog` nativo: foco contido, fechamento por Escape, foco restaurado e rolagem do fundo bloqueada.
 - Navegação por teclado, link de pular conteúdo, `aria-current`, labels, alt, foco visível e `prefers-reduced-motion`.
 - Hash inválido volta para `#home`; histórico do navegador funciona. Seções secundárias são carregadas sob demanda.
-- Data atualizada a cada minuto em pt-BR no fuso `America/Sao_Paulo`.
+- Data atualizada a cada minuto no idioma selecionado e no fuso `America/Sao_Paulo`.
+
+## Idiomas
+
+- Português e inglês com textos revisados em `src/i18n/en.ts`; os textos originais continuam em `src/data/`.
+- No modo Automático, seleciona o primeiro idioma suportado de `navigator.languages` (incluindo variantes como `pt-PT` e `en-GB`). Se nenhum for suportado, usa inglês. Não consulta IP nem solicita localização.
+- O seletor na barra lateral e no menu móvel guarda a preferência em `localStorage`. Automático remove a preferência manual. A troca recarrega a página mantendo a seção atual; dados de formulários não enviados não são preservados.
+- `?lang=pt`, `?lang=en` e `?lang=auto` permitem compartilhar e testar cada versão. O parâmetro tem prioridade sobre a preferência salva; sem armazenamento disponível, a URL mantém a seleção durante a navegação.
+- Navegação, conteúdo, estudo de caso, acessibilidade, validações, datas e metadados do navegador são traduzidos. PDF do currículo e capturas do sistema permanecem originais em português, com indicação na versão inglesa.
+- O HTML estático de produção e suas prévias sociais permanecem em português para robôs que não executam JavaScript.
+- Execute `node scripts/test-i18n.mjs` para verificar detecção, prioridade manual, fallback, preservação de recursos e cobertura dos textos acentuados.
 
 ## Commits
 

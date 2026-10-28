@@ -1,6 +1,7 @@
+import { localize } from '../i18n/locale';
 import type { ContactValues } from '@/types';
 
-export const contactCopy = {
+export const contactCopy = localize({
   title: 'Uma boa conversa é o primeiro passo.',
   description:
     'Tem uma ideia, um projeto ou um desafio? Conte um pouco sobre o que você tem em mente.',
@@ -43,7 +44,7 @@ export const contactCopy = {
     message: 'Escreva uma mensagem com pelo menos 10 caracteres.',
     tooLong: 'O texto ultrapassa o limite permitido.',
   },
-};
+});
 export const contactLimits = {
   name: { min: 2, max: 100 },
   email: { max: 254 },

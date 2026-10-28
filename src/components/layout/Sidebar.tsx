@@ -4,6 +4,7 @@ import { layoutCopy, siteConfig } from '@/data/siteConfig';
 import { useCurrentDate } from '@/hooks/useCurrentDate';
 import type { SectionId } from '@/types';
 import { NavItem } from './NavItem';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function Sidebar({ active }: { active: SectionId }) {
   const date = useCurrentDate();
@@ -30,6 +31,9 @@ export function Sidebar({ active }: { active: SectionId }) {
         </nav>
       </div>
       <div className="border-t border-line px-8 pb-8 pt-6">
+        <div className="mb-4">
+          <LanguageSwitcher />
+        </div>
         <p className="mb-3 flex items-center gap-2 text-[10px] text-text-primary">
           <span className="h-1.5 w-1.5 rounded-full bg-accent" />
           {layoutCopy.available}

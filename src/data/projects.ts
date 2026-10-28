@@ -1,6 +1,7 @@
+import { localize } from '../i18n/locale';
 import type { Project } from '@/types';
 
-export const portfolioCopy = {
+export const portfolioCopy = localize({
   intro: 'Código que resolve problemas reais.',
   description:
     'Uma seleção do que venho construindo, da interface às regras de negócio.',
@@ -11,8 +12,8 @@ export const portfolioCopy = {
   nextDescription:
     'Vamos transformar um desafio em uma experiência digital bem construída.',
   nextAction: 'Vamos conversar',
-};
-export const projects: Project[] = [
+});
+export const projects: Project[] = localize([
   {
     id: 'netinove',
     title: 'NETINOVE ERP',
@@ -87,9 +88,9 @@ export const projects: Project[] = [
       ],
     },
   },
-];
+]);
 
-export const caseStudyCopy = {
+export const caseStudyCopy = localize({
   back: 'Voltar ao portfólio',
   eyebrow: 'ESTUDO DE CASO',
   context: 'O projeto',
@@ -105,4 +106,4 @@ export const caseStudyCopy = {
   contactTitle: 'Vamos construir a interface do seu próximo projeto?',
   contactDescription:
     'Conte o que você precisa desenvolver. Podemos começar pela web, pelo desktop ou pelas duas plataformas.',
-};
+});

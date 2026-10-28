@@ -1,3 +1,4 @@
+import { localize } from '../i18n/locale';
 import {
   SiTypescript,
   SiJavascript,
@@ -19,14 +20,14 @@ import {
 } from 'lucide-react';
 import type { SkillGroup, Service } from '@/types';
 
-export const skillsCopy = {
+export const skillsCopy = localize({
   title: 'A tecnologia certa para cada ideia.',
   description:
     'Uma base técnica sólida, aliada ao cuidado com os detalhes e à vontade de continuar aprendendo.',
   servicesTitle: 'O que eu posso construir',
   professionalTitle: 'Como eu trabalho em equipe',
-};
-export const skillGroups: SkillGroup[] = [
+});
+export const skillGroups: SkillGroup[] = localize([
   {
     title: 'Linguagens',
     items: [
@@ -64,16 +65,16 @@ export const skillGroups: SkillGroup[] = [
     title: 'Inteligência artificial',
     items: [{ name: 'Base de conhecimento sólida', icon: BrainCircuit }],
   },
-];
-export const professionalSkills: string[] = [
+]);
+export const professionalSkills: string[] = localize([
   'Trabalho em equipe',
   'Comunicação clara',
   'Gestão do tempo',
   'Resolução de problemas',
   'Aprendizado ágil',
   'Compromisso com a qualidade',
-];
-export const services: Service[] = [
+]);
+export const services: Service[] = localize([
   {
     title: 'Front-End Developer',
     description:
@@ -98,4 +99,4 @@ export const services: Service[] = [
       'Projetos componentizados, modulares e organizados, seguindo boas práticas.',
     icon: Blocks,
   },
-];
+]);
