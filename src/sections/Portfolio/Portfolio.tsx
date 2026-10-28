@@ -1,11 +1,27 @@
+import { useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { projects, portfolioCopy } from '@/data/projects';
 import { sectionCopy } from '@/data/siteConfig';
 import { SectionTitle } from '@/components/ui/SectionTitle';
 import { ButtonLink } from '@/components/ui/Button';
 import { ProjectCard } from './ProjectCard';
+import { useActiveProject } from '@/hooks/useActiveProject';
+import { ProjectCaseStudy } from './ProjectCaseStudy';
 
 export function Portfolio() {
+  const activeProject = useActiveProject();
+  useEffect(() => {
+    document.getElementById('main-content')?.focus({ preventScroll: true });
+  }, [activeProject]);
+  const project = projects.find((item) => item.id === activeProject);
+  if (project?.caseStudy)
+    return (
+      <ProjectCaseStudy
+        key={project.id}
+        project={project}
+        study={project.caseStudy}
+      />
+    );
   return (
     <section className="py-4">
       <SectionTitle {...sectionCopy.portfolio} number="04" />

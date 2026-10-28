@@ -1,20 +1,17 @@
 import { useEffect, useState } from 'react';
-import { DEFAULT_SECTION, navigation } from '@/data/navigation';
+import { resolveRoute } from '@/utils/routes';
 import type { SectionId } from '@/types';
 
 function getSection(): SectionId {
-  return (
-    navigation.find(({ id }) => `#${id}` === window.location.hash)?.id ??
-    DEFAULT_SECTION
-  );
+  return resolveRoute(window.location.hash).section;
 }
 export function useActiveSection() {
   const [active, setActive] = useState<SectionId>(getSection);
   useEffect(() => {
     const update = () => {
-      const section = getSection();
-      if (window.location.hash !== `#${section}`)
-        window.history.replaceState(null, '', `#${section}`);
+      const { section, hash } = resolveRoute(window.location.hash);
+      if (window.location.hash !== hash)
+        window.history.replaceState(null, '', hash);
       setActive(section);
       window.scrollTo({ top: 0, behavior: 'instant' });
     };

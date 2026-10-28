@@ -4,6 +4,8 @@ import { MobileNav } from '@/components/layout/MobileNav';
 import { SectionWrapper } from '@/components/layout/SectionWrapper';
 import { SectionErrorBoundary } from '@/components/ui/SectionErrorBoundary';
 import { useActiveSection } from '@/hooks/useActiveSection';
+import { useActiveProject } from '@/hooks/useActiveProject';
+import { projects } from '@/data/projects';
 import { layoutCopy, sectionCopy, siteConfig } from '@/data/siteConfig';
 import { Hero } from '@/sections/Hero/Hero';
 
@@ -37,13 +39,18 @@ const sections = {
 
 export function App() {
   const active = useActiveSection();
+  const activeProject = useActiveProject();
+  const projectTitle = projects.find(
+    (project) => project.id === activeProject,
+  )?.title;
   const Section = sections[active];
   useEffect(() => {
-    document.title =
-      active === 'home'
+    document.title = projectTitle
+      ? `${projectTitle} | ${siteConfig.name}`
+      : active === 'home'
         ? siteConfig.title
         : `${sectionCopy[active].title} | ${siteConfig.name}`;
-  }, [active]);
+  }, [active, projectTitle]);
   return (
     <>
       <a

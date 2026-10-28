@@ -35,11 +35,12 @@ src/
     Hero/                   Hero, HeroIllustration (SVG original)
     About/                  About, ProfilePortrait, ResumeHighlights
     Skills/                 Skills
-    Portfolio/              Portfolio, ProjectCard
+    Portfolio/              Portfolio, ProjectCard, ProjectCaseStudy,
+                            ProjectGallery, ScreenshotDialog
     Contact/                Contact, ContactForm, ContactField
   data/                     conteúdo e configuração tipados
   hooks/                    useActiveSection, useCurrentDate, useMediaQuery,
-                            useContactForm
+                            useContactForm, useActiveProject
   services/contact.ts       integração de envio isolada
   types/                    contratos compartilhados
   utils/                    formatação e validação puras
@@ -64,6 +65,8 @@ Exports de componentes são nomeados; `React.lazy` adapta esses exports na front
 
 O NETINOVE ERP apresenta sua aplicação web em React/Vite e o PDV desktop em Electron. Adicione projetos ao array `projects`; o grid se adapta automaticamente. Use `href: null` enquanto uma URL real não estiver disponível. Não há projetos, métricas, contatos ou fotos pessoais inventados.
 
+O campo opcional `caseStudy` em `src/data/projects.ts` habilita uma apresentação interna em `#portfolio/<id>`. O NETINOVE tem contexto, responsabilidade por todo o front-end, plataformas, detalhes das interfaces e uma galeria de capturas reais. O botão “Explorar projeto” abre esse conteúdo mesmo sem uma URL externa. A galeria permite selecionar e ampliar imagens, fechar com Escape e abrir o arquivo original. A segunda captura enviada do cadastro de produtos repete a primeira e foi omitida da galeria.
+
 ### Dados preenchidos e pendências pessoais
 
 O currículo fornecido foi copiado sem alterações para `public/cv-felipe-neto.pdf`. O botão está ativo e usa o nome original do documento no download. Nome completo, e-mail, telefone, cidade, GitHub e histórico profissional foram preenchidos a partir do PDF. O nome de apresentação continua Felipe Neto.
@@ -73,7 +76,7 @@ O currículo fornecido foi copiado sem alterações para `public/cv-felipe-neto.
 - Os 3 anos de experiência do briefing foram preservados. As experiências profissionais usam as datas registradas no currículo, sem recalcular seus rótulos de duração.
 - O formulário já abre uma mensagem para o e-mail configurado via `mailto:`; o visitante precisa concluir o envio no aplicativo de e-mail.
 
-Ainda falta informar idiomas, URLs de LinkedIn e Instagram, a URL do projeto NETINOVE e uma foto. Adicione a foto em `public/profile.jpg` e altere `profile.photoAvailable` para `true`. O currículo permanece com seu conteúdo original; o site mostra apenas cidade/estado como localização.
+Foto e idiomas já estão preenchidos: português e inglês básico. O e-mail é `franciscofelipesn@gmail.com`, e os botões de WhatsApp apontam para `https://wa.me/5575998842196`, sem envio automático de mensagens. Ainda faltam URLs de LinkedIn e Instagram e, opcionalmente, uma demonstração externa do NETINOVE. O currículo permanece com seu conteúdo original; o site mostra apenas cidade/estado como localização.
 
 ## Formulário
 
@@ -125,5 +128,5 @@ docs: update profile configuration guide
 - Build de produção: concluído, com seções secundárias separadas em chunks.
 - Verificações isoladas aprovadas: campos vazios, e-mail inválido, espaços no nome, limite de mensagem, mudança de data no fuso de São Paulo, configuração ausente, resposta HTTP de sucesso/falha simulada e composição de `mailto:`. Nenhum e-mail real foi enviado.
 - Contraste calculado: texto secundário/card 4,61:1; branco/menu ativo 5,53:1; texto/botão azul 5,66:1.
-- A prévia local retornou HTTP 200. A sessão do navegador integrado não abriu neste ambiente; a inspeção visual e o teste interativo em desktop/mobile continuam pendentes.
+- Estudo de caso verificado no navegador em desktop e largura móvel de 390px: abertura pelo cartão, carregamento direto pelo hash, retorno ao portfólio, histórico do navegador, troca de capturas, ampliação, fechamento por Escape e restauração do foco. Sem rolagem horizontal no estudo de caso móvel. Idiomas conferidos na aba Sobre e destinos de e-mail/WhatsApp conferidos na aba Contato, sem envio de mensagens.
 - `npm audit` em 19/10/2026: 7 avisos em dependências de desenvolvimento transitivas do Tailwind 3 (5 altos, 2 moderados), relacionados a parsing/globs. Não foram apontadas dependências de produção afetadas. O npm propõe migração de versão principal do Tailwind; a entrega mantém o arquivo de tokens solicitado e registra esta limitação. Reavalie esses avisos antes de integrar entradas não confiáveis ao processo de build.

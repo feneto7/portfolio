@@ -40,6 +40,22 @@ export interface Project {
   imageAlt: string;
   href: string | null;
   featured: boolean;
+  caseStudy?: ProjectCaseStudy;
+}
+export interface ProjectScreenshot {
+  src: string;
+  alt: string;
+  title: string;
+  caption: string;
+}
+export interface ProjectCaseStudy {
+  introduction: string;
+  context: string;
+  role: string;
+  responsibility: string;
+  platforms: { title: string; stack: string; description: string }[];
+  highlights: { title: string; description: string }[];
+  screenshots: ProjectScreenshot[];
 }
 export interface ContactValues {
   name: string;

@@ -39,7 +39,7 @@ export const profile = {
   details: [
     { label: 'Nome completo', value: 'Francisco Felipe Santiago Neto' },
     { label: 'Experiência', value: '3 anos' },
-    { label: 'Idiomas', value: 'A informar' },
+    { label: 'Idiomas', value: 'Português · Inglês básico' },
     { label: 'Localização', value: 'São Felipe, Bahia — Brasil' },
     { label: 'E-mail', value: siteConfig.email ?? 'A informar' },
     { label: 'Telefone', value: siteConfig.phone.label },

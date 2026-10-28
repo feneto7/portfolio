@@ -34,7 +34,15 @@ export function ProjectCard({ project }: { project: Project }) {
             <Tag key={tag}>{tag}</Tag>
           ))}
         </div>
-        {project.href ? (
+        {project.caseStudy ? (
+          <a
+            href={`#portfolio/${project.id}`}
+            className="inline-flex min-h-11 items-center gap-3 text-xs font-bold text-accent hover:text-accent-hover"
+          >
+            {portfolioCopy.view}
+            <ArrowUpRight size={16} aria-hidden="true" />
+          </a>
+        ) : project.href ? (
           <a
             href={project.href}
             target="_blank"

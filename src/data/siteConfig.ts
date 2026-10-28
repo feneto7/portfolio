@@ -9,6 +9,10 @@ export const siteConfig = {
   role: 'Front-End / Mobile Developer',
   email: 'franciscofelipesn@gmail.com' as string | null,
   phone: { label: '(75) 99884-2196', href: 'tel:+5575998842196' },
+  whatsapp: {
+    href: 'https://wa.me/5575998842196',
+    label: 'Conversar pelo WhatsApp',
+  },
   contact: {
     endpoint: import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined,
   },

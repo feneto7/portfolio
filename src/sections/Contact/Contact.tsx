@@ -1,9 +1,10 @@
-import { Mail, Phone, BriefcaseBusiness } from 'lucide-react';
+import { Mail, Phone, BriefcaseBusiness, MessageCircle } from 'lucide-react';
 import { contactCopy } from '@/data/contact';
 import { sectionCopy, siteConfig } from '@/data/siteConfig';
 import { SectionTitle } from '@/components/ui/SectionTitle';
 import { SocialLinks } from '@/components/ui/SocialIcon';
 import { ContactForm } from './ContactForm';
+import { ButtonLink } from '@/components/ui/Button';
 
 export function Contact() {
   return (
@@ -79,6 +80,15 @@ export function Contact() {
               </div>
             </div>
           </div>
+          <ButtonLink
+            href={siteConfig.whatsapp.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8"
+          >
+            <MessageCircle size={18} aria-hidden="true" />
+            {siteConfig.whatsapp.label}
+          </ButtonLink>
           <p className="mb-4 mt-10 text-[10px] uppercase tracking-[.15em] text-text-muted">
             {contactCopy.networks}
           </p>
