@@ -5,16 +5,17 @@ export const heroCopy = {
   greeting: 'Olá, eu sou',
   name: siteConfig.name,
   headline:
-    'Sou Desenvolvedor Front-End com 3 anos de experiência, criando aplicações web e mobile com TypeScript, React e Next.js, com código limpo, modular e escalável, e uma base sólida em IA.',
-  tagline: 'Eu construo coisas para a web e para o mobile.',
-  primaryAction: 'Conheça meu trabalho',
-  secondaryAction: 'Vamos conversar',
+    'Desenvolvo aplicações web e desktop com React, TypeScript e Electron.',
+  tagline:
+    'Interfaces para sistemas de gestão e pontos de venda, com foco em clareza e facilidade de uso.',
+  primaryAction: 'Ver projetos',
+  secondaryAction: 'Entrar em contato',
   illustrationAlt:
     'Ilustração de um desenvolvedor trabalhando com dois monitores em uma mesa.',
-  artLabel: 'IDEIAS QUE GANHAM VIDA',
-  artCaption: 'Uma linha de código de cada vez.',
+  artLabel: 'SISTEMAS DE GESTÃO & PDV',
+  artCaption: 'Interfaces para o dia a dia de quem usa.',
   stackLabel: 'MINHA STACK',
-  stack: ['TypeScript', 'React', 'Next.js'],
+  stack: ['React', 'TypeScript', 'Electron'],
 };
 export const profile = {
   introduction: 'Eu sou',

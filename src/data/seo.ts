@@ -1,7 +1,7 @@
 export const seo = {
-  title: 'Felipe Neto | Desenvolvedor Front-End & Mobile',
+  title: 'Felipe Neto | Desenvolvedor Web & Desktop',
   description:
-    'Desenvolvedor Front-End e Mobile com 3 anos de experiência. TypeScript, React e Next.js para aplicações limpas, modulares e escaláveis.',
+    'Desenvolvedor de aplicações web e desktop com React, TypeScript e Electron. Conheça meu trabalho com interfaces para sistemas de gestão e pontos de venda.',
   socialDescription:
-    'Eu construo coisas para a web e para o mobile. Conheça meu trabalho.',
+    'Aplicações web e desktop com React, TypeScript e Electron. Explore o front-end do NETINOVE ERP e do seu PDV.',
 };

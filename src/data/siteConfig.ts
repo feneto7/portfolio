@@ -6,7 +6,7 @@ export const siteConfig = {
   name: 'Felipe Neto',
   locale: 'pt-BR',
   timeZone: 'America/Sao_Paulo',
-  role: 'Front-End / Mobile Developer',
+  role: 'Desenvolvedor Web & Desktop',
   email: 'franciscofelipesn@gmail.com' as string | null,
   phone: { label: '(75) 99884-2196', href: 'tel:+5575998842196' },
   whatsapp: {
@@ -29,14 +29,14 @@ export const layoutCopy = {
   skipLink: 'Pular para o conteúdo',
   loading: 'Carregando seção…',
   available: 'Disponível para projetos',
-  location: 'Web & mobile, com propósito.',
+  location: 'Desenvolvimento web & desktop.',
   footer: 'Feito com cuidado. Construído com código.',
   socialPending: 'Link em breve',
   error: 'Não foi possível carregar esta seção.',
   retry: 'Tentar novamente',
 };
 export const sectionCopy = {
-  home: { eyebrow: 'DESIGN EM CÓDIGO. IDEIAS EM PRODUTOS.', title: 'Início' },
+  home: { eyebrow: 'DESENVOLVIMENTO FRONT-END', title: 'Início' },
   about: { eyebrow: 'UM POUCO DA MINHA HISTÓRIA', title: 'Sobre mim' },
   skills: { eyebrow: 'FERRAMENTAS & POSSIBILIDADES', title: 'Habilidades' },
   portfolio: { eyebrow: 'DO PRIMEIRO COMMIT AO PRODUTO', title: 'Portfólio' },
