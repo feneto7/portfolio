@@ -20,8 +20,8 @@ export const english: Record<string, string> = {
   'Eu sou': "I'm",
   'Sou Francisco Felipe Santiago Neto, desenvolvedor de São Felipe, Bahia. Transformo ideias em interfaces intuitivas e aplicações bem estruturadas. Minha trajetória também inclui suporte técnico na Netinove desde 2019, com atendimento ao usuário, documentação e treinamento de equipes — experiências que reforçam meu cuidado com quem utiliza cada produto.':
     'I am Francisco Felipe Santiago Neto, a developer based in São Felipe, Bahia, Brazil. I turn ideas into intuitive interfaces and well-structured applications. My background also includes technical support at Netinove since 2019, helping users, writing documentation and training teams — experience that shapes my focus on the people who use each product.',
-  'Foto de Francisco Felipe Santiago Neto em um restaurante.':
-    'Photo of Francisco Felipe Santiago Neto at a restaurant.',
+  'Retrato de Francisco Felipe Santiago Neto.':
+    'Portrait of Francisco Felipe Santiago Neto.',
   'Seu retrato.': 'Your portrait.',
   'Baixar CV': 'Download CV (Portuguese)',
   'Currículo em preparação': 'Résumé coming soon',

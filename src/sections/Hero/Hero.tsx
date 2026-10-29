@@ -3,7 +3,7 @@ import { heroCopy } from '@/data/profile';
 import { sectionCopy, siteConfig } from '@/data/siteConfig';
 import { ButtonLink } from '@/components/ui/Button';
 import { SocialLinks } from '@/components/ui/SocialIcon';
-import { HeroIllustration } from './HeroIllustration';
+import { ProfilePortrait } from '@/sections/About/ProfilePortrait';
 
 export function Hero() {
   return (
@@ -53,12 +53,12 @@ export function Hero() {
           </div>
           <SocialLinks />
         </div>
-        <figure className="mx-auto w-full max-w-[520px] lg:-mr-5">
-          <HeroIllustration />
-          <figcaption className="mt-3 text-center text-[10px] tracking-[.16em] text-text-muted">
+        <div className="mx-auto w-full max-w-[440px]">
+          <ProfilePortrait priority />
+          <p className="mt-3 text-center text-[10px] tracking-[.16em] text-text-muted">
             {heroCopy.artCaption}
-          </figcaption>
-        </figure>
+          </p>
+        </div>
       </div>
       <div className="relative flex flex-wrap items-center gap-x-7 gap-y-3 text-xs">
         <span className="text-[9px] tracking-[.18em] text-text-muted">
